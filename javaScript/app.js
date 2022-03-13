@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
         for(let i=0; i<cardArray.length; i++){
             const card = document.createElement('img')
-            card.setAttribute('src', '../images/blank.png')
+            card.setAttribute('src', '/images/blank.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click',flipCard)
             grid.appendChild(card)
@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
         // the different card
         else{
             document.getElementById("Display").innerHTML = 'Sorry, try again'
-            cards[optionOneId].setAttribute('src', '../images/blank.png')
-            cards[optionTwoId].setAttribute('src', '../images/blank.png')
+            cards[optionOneId].setAttribute('src', '/images/blank.png')
+            cards[optionTwoId].setAttribute('src', '/images/blank.png')
         }
         cardsChosen = []
         cardsChosenId = []
