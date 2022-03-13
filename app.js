@@ -88,8 +88,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
         const optionOneId = cardsChosenId[0]
         const optionTwoId = cardsChosenId[1]
 
-        // the same card
-        if(cardsChosen[0] === cardsChosen[1]){
+        // same card
+        if(optionOneId == optionTwoId) {
+          cards[optionOneId].setAttribute('src', 'blank.png')
+          cards[optionTwoId].setAttribute('src', 'blank.png')
+          document.getElementById("Display").innerHTML = 'You have clicked the same image!'
+        }
+        // the card is same
+        else if(cardsChosen[0] === cardsChosen[1]){
             document.getElementById("Display").innerHTML = 'You found a match'
             cards[optionOneId].setAttribute('src', 'white.png')
             cards[optionTwoId].setAttribute('src', 'white.png')
